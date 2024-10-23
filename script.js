@@ -22,7 +22,7 @@ let url2 = ""
 
 let getData = async () => {
 
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&units=Metric&appid=${process.env.API_KEY}`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&units=Metric&appid=e3c40612576149fda5b5c02e4a0f17a6`;
 
     let response = await fetch(url);
     let data = await response.json();
