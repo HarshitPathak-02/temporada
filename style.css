@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height:100%;
+    width:100%;
+}
+
+.navbar {
+    height: 5rem;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+    gap: 4rem;
+    font-size: 1.5rem;
+}
+
+.two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(15, 120, 212);
+    height: 20rem;
+    width: 100%;
+    padding: 2rem;
+    background-image: url('./assets/back.jpg');
+    background-size: cover;
+}
+
+.search_bar {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    height: 4rem;
+    width: 73%;
+    margin-left: 14rem;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+#city {
+    width: 60rem;
+    height: 3.5rem;
+    /* border: 0.1rem solid black; */
+    padding: 1rem;
+    font-size: 1.3rem;
+    outline: none;
+    border: none;
+}
+
+#srch_icon {
+    color: black;
+    /* height: 5rem;
+    width: 5rem; */
+    font-size: 1.5rem;
+}
+
+.three {
+    display: flex;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-image: url("./assets/back3.webp");
+    background-size: cover;
+}
+
+.city_card_left_upper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.city_card {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 2rem 5rem;
+    display: flex;
+    gap: 1rem;
+    width: 80%;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0.03rem 0.03rem 0.3rem 0.3rem rgb(255, 255, 255);
+    justify-content: space-between;
+    background-image: url("./assets/back2.jpg");
+    background-size: cover;
+    color:rgb(255, 255, 255);
+
+}
+
+.city_card_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.city_card_right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: black;
+}
+
+.humidity, .pressure, .wind_speed, .max_temp, .min_temp, .feels_like {
+    padding-bottom: 0.7rem;
+    border: 0.15rem rgba(255, 255, 255,0.7) solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    height: 3rem;
+    align-items: end;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.one_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.one_left {
+    display: flex;
+    justify-content: space-between;
+    width: 15rem;
+    /* height: 3rem; */
+}
+
+.city_card_left_lower h1 {
+    font-size: 9rem;
+}
+
+#icon {
+    margin-top: 1rem;
+    height: 10rem;
+    width: 10rem;
+}
