@@ -16,11 +16,41 @@ let temp = document.querySelector("#temperature")
 let type = document.querySelector("#type")
 let wndSpd = document.querySelector("#wnd_spd")
 let prcptn = document.querySelector("#prcp")
+let introHead = document.querySelector("#intro_heading")
+let facility = document.querySelector("#facility")
+let intro = document.querySelector(".intro")
+let othrCrds = document.querySelector(".other_cards")
 
 
 let url2 = ""
 
 let getData = async () => {
+
+    if (city.value) {
+        ctyCrd.style.display = "flex"
+        othrCrds.style.display = "flex"
+        intro.style.display = "none"
+
+        gsap.from(ctyCrd,{
+            opacity:0,
+            scale:0.5,
+            duration:1,
+
+        })
+
+        gsap.from(".card", {
+            opacity:0,
+            x:50,
+            stagger:0.5,
+            scrollTrigger: {
+                trigger:othrCrds,
+                scroller:"body",
+                scrub:1.5,
+                top:"top 30%",
+                end: "top 15%",
+            }
+        })
+    }
 
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&units=Metric&appid=e3c40612576149fda5b5c02e4a0f17a6`;
 
@@ -71,4 +101,19 @@ gsap.from(".city_card_left_upper h2", {
     delay:1.7,
     duration:1,
     opacity:0
+})
+
+gsap.from(introHead, {
+    opacity:0,
+    scale:1.5,
+    duration:1,
+    delay:0.2
+})
+
+gsap.from("#facility", {
+    y:-50,
+    opacity:0,
+    duration:0.7,
+    delay:0.5,
+    stagger:0.5
 })
