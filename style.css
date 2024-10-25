@@ -86,11 +86,12 @@ html, body {
 }
 
 #intro_heading {
-    font-size: 7rem;
+    font-size: 6rem;
 }
 
 #facility {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    white-space: nowrap;
 }
 
 .city_card_left_upper {
@@ -191,12 +192,12 @@ html, body {
     font-size: 2.5rem;
 }
 
-.card_temp {
+.card_temp_bang, .card_temp_mum, .card_temp_par, .card_temp_lon, .card_temp_ban {
     font-size: 2.5rem;
     font-weight: 600;
 }
 
-#crd_humd, #crd_wndspd, #crd_clds {
+#crd_humd_ban, #crd_humd_bang, #crd_humd_lon, #crd_humd_mum, #crd_humd_par, #crd_wndspd_lon, #crd_wndspd_par, #crd_wndspd_bang, #crd_wndspd_ban, #crd_wndspd_mum, #crd_clds_lon, #crd_clds_mum, #crd_clds_ban, #crd_clds_bang, #crd_clds_par {
     font-size: 1.1rem;
     font-weight: 600;
 }

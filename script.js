@@ -20,9 +20,27 @@ let introHead = document.querySelector("#intro_heading")
 let facility = document.querySelector("#facility")
 let intro = document.querySelector(".intro")
 let othrCrds = document.querySelector(".other_cards")
+let banHum = document.querySelector("#crd_humd_ban")
+let lonHum = document.querySelector("#crd_humd_lon")
+let bangHum = document.querySelector("#crd_humd_bang")
+let mumHum = document.querySelector("#crd_humd_mum")
+let parHum = document.querySelector("#crd_humd_par")
+let lonTemp = document.querySelector(".card_temp_lon")
+let banTemp = document.querySelector(".card_temp_ban")
+let bangTemp = document.querySelector(".card_temp_bang")
+let parTemp = document.querySelector(".card_temp_par")
+let mumTemp = document.querySelector(".card_temp_mum")
+let lonWnd = document.querySelector("#crd_wndspd_lon")
+let banWnd = document.querySelector("#crd_wndspd_ban")
+let bangWnd = document.querySelector("#crd_wndspd_bang")
+let parWnd = document.querySelector("#crd_wndspd_par")
+let mumWnd = document.querySelector("#crd_wndspd_mum")
+let lonCld = document.querySelector("#crd_clds_lon")
+let banCld = document.querySelector("#crd_clds_ban")
+let bangCld = document.querySelector("#crd_clds_bang")
+let parCld = document.querySelector("#crd_clds_par")
+let mumCld = document.querySelector("#crd_clds_mum")
 
-
-let url2 = ""
 
 let getData = async () => {
 
@@ -38,16 +56,59 @@ let getData = async () => {
 
         })
 
-        gsap.from(".card", {
+        // gsap.from(".card", {
+        //     opacity:0,
+        //     x:50,
+        //     stagger:0.5,
+        //     scrollTrigger: {
+        //         trigger:othrCrds,
+        //         scroller:"body",
+        //         scrub:1.5,
+        //         top:"top 30%",
+        //         end: "top 15%",
+        //     }
+        // })
+
+        gsap.from("#card1", {
+            y:250,
             opacity:0,
-            x:50,
-            stagger:0.5,
+            duration:1,
+            stagger:0.3,
             scrollTrigger: {
-                trigger:othrCrds,
                 scroller:"body",
+                trigger:othrCrds,
                 scrub:1.5,
-                top:"top 30%",
-                end: "top 15%",
+                start: "top 50%",
+                end:"top 15%",
+                // markers:true
+            }
+        })
+
+        gsap.from("#card2", {
+            scale:0.5,
+            opacity:0,
+            duration:0.5,
+            scrollTrigger: {
+                scroller:"body",
+                trigger:othrCrds,
+                scrub:1.5,
+                start: "top 50%",
+                end:"top 10%"
+            }
+        })
+
+        gsap.from("#card3", {
+            y:-250,
+            opacity:0,
+            duration:1,
+            stagger:0.3,
+            scrollTrigger: {
+                scroller:"body",
+                trigger:othrCrds,
+                scrub:1.5,
+                start: "top 50%",
+                end:"top 15%",
+                // markers:true
             }
         })
     }
@@ -76,32 +137,60 @@ let getData = async () => {
     mxTmp.innerHTML = data.main.temp_max + "&deg;C"
 
     icn.setAttribute('src',`http://openweathermap.org/img/w/${data.weather[0].icon}.png`)
+
+
+    let url3 = 'https://api.openweathermap.org/data/2.5/weather?q=london&units=Metric&appid=e3c40612576149fda5b5c02e4a0f17a6'
+    let url4 = 'https://api.openweathermap.org/data/2.5/weather?q=mumbai&units=Metric&appid=e3c40612576149fda5b5c02e4a0f17a6'
+    let url5 = 'https://api.openweathermap.org/data/2.5/weather?q=bangalore&units=Metric&appid=e3c40612576149fda5b5c02e4a0f17a6'
+    let url6 = 'https://api.openweathermap.org/data/2.5/weather?q=bangkok&units=Metric&appid=e3c40612576149fda5b5c02e4a0f17a6'
+    let url7 = 'https://api.openweathermap.org/data/2.5/weather?q=paris&units=Metric&appid=e3c40612576149fda5b5c02e4a0f17a6'
+
+    let response1 = await fetch(url3);
+    let data1 = await response1.json();
+
+    let response2 = await fetch(url4);
+    let data2 = await response2.json();
+
+    let response3 = await fetch(url5);
+    let data3 = await response3.json();
+
+    let response4 = await fetch(url6);
+    let data4 = await response4.json();
+
+    let response5 = await fetch(url7);
+    let data5 = await response5.json();
+
+    lonTemp.innerHTML = data1.main.temp + "&degC"
+    lonHum.innerHTML = data1.main.humidity + "%"
+    lonWnd.innerHTML = data1.wind.speed + " km/h"
+    lonCld.innerHTML = data1.clouds.all + "%"
+
+    parTemp.innerHTML = data5.main.temp + "&degC"
+    parHum.innerHTML = data5.main.temp + "%"
+    parWnd.innerHTML = data5.main.temp + "km/h"    
+    parWnd.innerHTML = data5.main.temp + "km/h"    
+
+    banTemp.innerHTML = data3.main.temp + "&degC"
+    banHum.innerHTML = data3.main.temp + "%"
+    banWnd.innerHTML = data3.main.temp + "km/h"
+    banWnd.innerHTML = data3.main.temp + "km/h"
+
+    bangTemp.innerHTML = data4.main.temp + "&degC"
+    bangHum.innerHTML = data4.main.temp + "%"
+    bangWnd.innerHTML = data4.main.temp + "km/h"
+    bangWnd.innerHTML = data4.main.temp + "km/h"
+
+    mumTemp.innerHTML = data2.main.temp + "&degC"
+    mumHum.innerHTML = data2.main.temp + "%"
+    mumWnd.innerHTML = data2.main.temp + "km/h"
+    mumWnd.innerHTML = data2.main.temp + "km/h"
+
+
+
 }
 
 btn.addEventListener('click',getData)
 
-
-gsap.from(".city_card", {
-    y:50,
-    opacity:0,
-    delay:1,
-    duration:1
-})
-
-gsap.from(".city_left_upper2 h3", {
-    x:-50,
-    opacity:0,
-    stagger:0.3,
-    duration:1,
-    delay:1.5
-})
-
-gsap.from(".city_card_left_upper h2", {
-    y:-50,
-    delay:1.7,
-    duration:1,
-    opacity:0
-})
 
 gsap.from(introHead, {
     opacity:0,
