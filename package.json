@@ -1,4 +1,7 @@
 {
+  "engine":{
+    "node": "21.7.1"
+  },
   "name": "minorproject",
   "version": "1.0.0",
   "main": "index.js",
