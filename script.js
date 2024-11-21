@@ -40,6 +40,11 @@ let banCld = document.querySelector("#crd_clds_ban")
 let bangCld = document.querySelector("#crd_clds_bang")
 let parCld = document.querySelector("#crd_clds_par")
 let mumCld = document.querySelector("#crd_clds_mum")
+let mumCrdImg = document.querySelector("#card_img_mum")
+let parCrdImg = document.querySelector("#card_img_par")
+let bangCrdImg = document.querySelector("#card_img_bang")
+let lonCrdImg = document.querySelector("#card_img_lon")
+let banCrdImg = document.querySelector("#card_img_ban")
 
 
 let getData = async () => {
@@ -164,28 +169,31 @@ let getData = async () => {
     lonHum.innerHTML = data1.main.humidity + "%"
     lonWnd.innerHTML = data1.wind.speed + " km/h"
     lonCld.innerHTML = data1.clouds.all + "%"
+    lonCrdImg.setAttribute('src',`http://openweathermap.org/img/w/${data1.weather[0].icon}.png`)
 
     parTemp.innerHTML = data5.main.temp + "&degC"
-    parHum.innerHTML = data5.main.temp + "%"
-    parWnd.innerHTML = data5.main.temp + "km/h"    
-    parWnd.innerHTML = data5.main.temp + "km/h"    
+    parHum.innerHTML = data5.main.humidity + "%"
+    parWnd.innerHTML = data5.wind.speed + " km/h"    
+    parCld.innerHTML = data5.clouds.all + "%"
+    parCrdImg.setAttribute('src',`http://openweathermap.org/img/w/${data2.weather[0].icon}.png`)    
 
     banTemp.innerHTML = data3.main.temp + "&degC"
-    banHum.innerHTML = data3.main.temp + "%"
-    banWnd.innerHTML = data3.main.temp + "km/h"
-    banWnd.innerHTML = data3.main.temp + "km/h"
+    banHum.innerHTML = data3.main.humidity + "%"
+    banWnd.innerHTML = data3.wind.speed + "km/h"
+    banCld.innerHTML = data3.clouds.all + "%"
+    banCrdImg.setAttribute('src',`http://openweathermap.org/img/w/${data3.weather[0].icon}.png`)
 
     bangTemp.innerHTML = data4.main.temp + "&degC"
-    bangHum.innerHTML = data4.main.temp + "%"
-    bangWnd.innerHTML = data4.main.temp + "km/h"
-    bangWnd.innerHTML = data4.main.temp + "km/h"
+    bangHum.innerHTML = data4.main.humidity + "%"
+    bangWnd.innerHTML = data4.wind.speed + "km/h"
+    bangCld.innerHTML = data4.clouds.all + "%"
+    bangCrdImg.setAttribute('src',`http://openweathermap.org/img/w/${data4.weather[0].icon}.png`)
 
     mumTemp.innerHTML = data2.main.temp + "&degC"
-    mumHum.innerHTML = data2.main.temp + "%"
-    mumWnd.innerHTML = data2.main.temp + "km/h"
-    mumWnd.innerHTML = data2.main.temp + "km/h"
-
-
+    mumHum.innerHTML = data2.main.humidity + "%"
+    mumWnd.innerHTML = data2.wind.speed + "km/h"
+    mumCld.innerHTML = data2.clouds.all + "%"
+    mumCrdImg.setAttribute('src',`http://openweathermap.org/img/w/${data5.weather[0].icon}.png`)
 
 }
 
