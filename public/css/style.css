@@ -1,0 +1,269 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #b2d8fd;
+}
+
+.navbar {
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+    gap: 4rem;
+    font-size: 1.5rem;
+    align-self: flex-start;
+}
+
+.home-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    padding: 2rem;
+    background-color: #90bceb;
+    background-image: url('/images/clouds.jpg');
+    background-position: bottom;
+}
+
+.wthr_btn {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    height: 4rem;
+    background-color: #b2d8fd;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+#getWthrBtn {
+    text-decoration: none;
+    color: #345e92;
+    font-size: 3rem;
+}
+
+.search_bar {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    height: 4rem;
+    width: 73%;
+    background-color: #b2d8fd;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+#city {
+    width: 60rem;
+    height: 3.5rem;
+    padding: 1rem;
+    font-size: 1.3rem;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    background-color: #b2d8fd;
+    color: white;
+}
+
+#srch_icon {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.intro {
+    display: flex;
+    height: 50%;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.intro_left {
+    width: 55%;
+}
+
+#intro_heading {
+    font-size: 6rem;
+}
+
+#facility {
+    font-size: 2.5rem;
+    white-space: nowrap;
+}
+
+.weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    background-color: #90bceb;
+    background-image: url('/images/clouds.jpg');
+    background-position: bottom;
+}
+
+.city_card_left_upper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.city_card {
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 2rem 5rem;
+    gap: 1rem;
+    width: 80%;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.1rem 0.5rem 0.5rem #acd8fd;
+    justify-content: space-between;
+    background-color: #39639c;
+    background-size: cover;
+    color:rgb(255, 255, 255);
+    
+}
+
+.city_card_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.city_card_right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: white;
+}
+
+.city_card_left_lower h1 {
+    font-size: 9rem;
+}
+
+#icon {
+    margin-top: 1rem;
+    height: 10rem;
+    width: 10rem;
+}
+
+.humidity, .pressure, .wind_speed, .max_temp, .min_temp, .feels_like {
+    padding-bottom: 0.7rem;
+    border: 0.15rem rgba(255, 255, 255,0.7) solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    height: 3rem;
+    align-items: end;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.one_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.one_left {
+    display: flex;
+    justify-content: space-between;
+    width: 15rem;
+}
+
+.other_cards {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem;
+    border-radius: 1rem;
+    width: 17rem;
+    gap: 0.5rem;
+    color: #1e3062;
+    background-color: white;
+    box-shadow: 0.1rem 0.1rem 0.5rem 0.5rem #acd8fd;
+}
+
+#crd_cty_head {
+    font-size: 2.5rem;
+}
+
+.card_temp_bang, .card_temp_mum, .card_temp_par, .card_temp_lon, .card_temp_ban {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+#crd_humd_ban, #crd_humd_bang, #crd_humd_lon, #crd_humd_mum, #crd_humd_par, #crd_wndspd_lon, #crd_wndspd_par, #crd_wndspd_bang, #crd_wndspd_ban, #crd_wndspd_mum, #crd_clds_lon, #crd_clds_mum, #crd_clds_ban, #crd_clds_bang, #crd_clds_par {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+#crd_humd_head, #crd_wndspd_head, #crd_clds_head {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.card_others {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 0.2rem;
+}
+
+#card_img_par, #card_img_lon, #card_img_ban, #card_img_bang, #card_img_mum {
+    height: 10rem; 
+    width: 13rem;
+}
+
+.card_humd, .card_wnd_spd, .card_clouds {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.footer-lower {
+    display: flex;
+}
+
+.footer .p {
+    font-size: 2.5rem;
+}
+
+.footer-lower p {
+    font-size: 2rem;
+    padding: 0.5rem;
+}
