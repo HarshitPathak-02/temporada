@@ -17,6 +17,9 @@ app.listen(8000, () => {
 app.get("/", (req, res) => {
   res.render("home/home.ejs");
 });
+app.get("/gyfj", (req, res) => {
+  res.render("home/home.ejs");
+});
 
 app.get("/weather-info", (req, res) => {
     res.render("weather/weather.ejs");
